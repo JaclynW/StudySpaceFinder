@@ -1,0 +1,120 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Unique background color for each section */
+#find-your-study-spot {
+    position: relative;
+    height: 600px;
+}
+
+#find-your-study-spot::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:  url('../assets/studySpot2.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    content: "";
+
+}
+
+#find-your-study-spot .inner-div{
+    background-color: #123332; 
+    border-radius: 7px; 
+    height: 100%;
+}
+
+#find-your-study-spot .content {
+    position: relative;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding-left: 200px;
+}
+
+#find-your-study-spot .content h1 {
+    font-size: 3em;
+}
+
+#search-function {
+    background-color: #ffd9be;
+    height: 500px; 
+}
+
+#search-function .inner-div{
+    background-color: #123332; 
+    border-radius: 7px; 
+    height: 100%;
+}
+
+#search-function .content {
+    position: relative;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    text-align: center; 
+}
+
+/* This is to get the zip-code field and the button to be side by side. */
+#search-form .form-row {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+#zip-code {
+    height: 40px;
+    border-radius: 7px; 
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    margin-right: 10px;
+    
+}
+
+#contact {
+    background-color: #e9ecef; 
+}
+
+/* Existing button and input styles */
+.section {
+    margin: 20px;
+    padding: 20px;
+}
+.button {
+    padding: 12px 24px; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px; 
+    color: #333; 
+    background-color: #ef9c82; 
+    border: none;
+    border-radius: 7px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+
+.search-section input[type="text"], .search-section input[type="checkbox"] {
+    margin: 10px 0;
+}
