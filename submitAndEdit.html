@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <title>Edit Study Spot Submission</title>
+</head>
+<body>
+    <header>
+        <h1>Edit or Submit a Study Spot</h1>
+    </header>
+    
+    <section id="submissionForm">
+        <form id="studySpotForm" method="post">
+            <label for="name">Study Spot Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            
+            <label for="wifi">Wi-Fi Available:</label>
+            <select id="wifi" name="wifi">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label for="outlets">Power Outlets Available:</label>
+            <select id="outlets" name="outlets">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label for="hours">Opening Hours:</label>
+            <input type="text" id="hours" name="hours">
+            
+            <label for="additionalInfo">Additional Information:</label>
+            <textarea id="additionalInfo" name="additionalInfo"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>Return to <a href="#">User Dashboard</a></p>
+    </footer>
+</body>
+</html>
