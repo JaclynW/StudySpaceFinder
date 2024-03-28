@@ -1,5 +1,6 @@
 body {
     font-family: 'Times New Roman', Times, serif;
+    background-color: #004643;
 }
 /* Unique background color for each section */
 #find-your-study-spot {
@@ -22,14 +23,14 @@ body {
 }
 
 #find-your-study-spot .inner-div{
-    background-color: #123332; 
+    background-color: #004643; 
     border-radius: 7px; 
     height: 100%;
 }
 
 #find-your-study-spot .content {
     position: relative;
-    color: white;
+    color: #abd1c6;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -56,7 +57,7 @@ body {
 
 #search-function .content {
     position: relative;
-    color: white;
+    color: #abd1c6;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -92,8 +93,8 @@ body {
     padding: 12px 24px; 
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px; 
-    color: #333; 
-    background-color: #ef9c82; 
+    color: #f9bc60; 
+    background-color: #e16162; 
     border: none;
     border-radius: 7px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
@@ -117,8 +118,8 @@ body {
 }
 
 #navbar {
-    background-color: #4B3F6B; /* Adjust the color to match your brand */
-    color: white;
+    background-color: #abd1c6; /* Adjust the color to match your brand */
+    color: #001e1d;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -144,7 +145,7 @@ body {
 }
 
 #search-btn, #close-btn {
-    background-color: white;
+    background-color: #f9bc60;
     border: none;
     padding: 10px;
     margin-left: 5px;
@@ -154,7 +155,7 @@ body {
 }
 
 #search-btn:hover, #close-btn:hover {
-    background-color: #ddd; /* Light grey background for the button on hover */
+    background-color: #e16162; /* Light grey background for the button on hover */
 }
 
 /* Hide the close button initially */
