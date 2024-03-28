@@ -16,18 +16,20 @@
         <div id="logo"><a href="index.html">Study Spot Finder</a></div>
         <form id="search-form">
             <div id="search-box">
-                <input type="search" id="search-input" placeholder="Enter zipcode...">
+                <input type="search" id="search-input" placeholder="Enter zipcode..." pattern="^\d{5}$"
+                    title="Enter a 5-digit ZIP code.">
                 <button id="search-btn">&#128269;</button>
                 <button type="button" id="close-btn">&#10006;</button>
             </div>
+            <div id="error-message" style="color: red; display: none;">Please enter a valid ZIP code.</div>
         </form>
-        
+
     </nav>
     <header>
         <h1>Admin Dashboard</h1>
     </header>
 
-    
+
 
     <section id="pendingApprovals">
         <h2>Pending Listing Approvals</h2>
@@ -121,6 +123,20 @@
                 modal.style.display = "none";
             }
         }
+
+        document.getElementById('search-form').addEventListener('submit', function (event) {
+            var searchInput = document.getElementById('search-input');
+            var errorMessage = document.getElementById('error-message');
+
+            // Check if the search input's value matches the pattern
+            if (!searchInput.checkValidity()) {
+                event.preventDefault(); // Prevent form submission
+                errorMessage.style.display = 'block'; // Show the error message
+            } else {
+                errorMessage.style.display = 'none'; // Hide the error message
+            }
+        });
+
 
     </script>
 </body>
