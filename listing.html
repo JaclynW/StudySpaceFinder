@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <title>Study Space Listings</title>
+    <style>
+        /* Quick styles for demonstration */
+        .listing { border: 1px solid #ddd; margin-bottom: 10px; padding: 10px; }
+        .details { display: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Study Space Listings</h1>
+    </header>
+    
+    <section id="filter">
+        <h2>Filter Results</h2>
+        <form id="filterForm">
+            <label for="wifi">Wi-Fi</label>
+            <input type="checkbox" id="wifi" name="wifi">
+            <label for="outlets">Power Outlets</label>
+            <input type="checkbox" id="outlets" name="outlets">
+            <!-- Add other filters as needed -->
+            <button type="submit">Apply Filters</button>
+        </form>
+    </section>
+    
+    <section id="results">
+        <h2>Search Results</h2>
+        <!-- Example listings (These would be dynamically generated in a real application) -->
+        <div class="listing" onclick="showDetails('details1')">
+            <h3>Library Quiet Zone</h3>
+            <p>Location: Downtown City Library</p>
+        </div>
+        <div id="details1" class="details">
+            <p>Wi-Fi: Yes</p>
+            <p>Power Outlets: Yes</p>
+            <p>Opening Hours: 9am - 9pm</p>
+            <a href="https://maps.google.com" target="_blank">Get Directions</a> | <a href="#">Website</a>
+            <!-- Placeholder for review submission form for registered users -->
+        </div>
+        
+        <div class="listing" onclick="showDetails('details2')">
+            <h3>Café Study Corner</h3>
+            <p>Location: Central Perk Café</p>
+        </div>
+        <div id="details2" class="details">
+            <p>Wi-Fi: Yes</p>
+            <p>Power Outlets: Limited</p>
+            <p>Opening Hours: 8am - 8pm</p>
+            <a href="https://maps.google.com" target="_blank">Get Directions</a> | <a href="#">Website</a>
+            <!-- Placeholder for review submission form for registered users -->
+        </div>
+    </section>
+    
+    <script>
+        function showDetails(id) {
+            var details = document.getElementById(id);
+            var isVisible = details.style.display == "block";
+            details.style.display = isVisible ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

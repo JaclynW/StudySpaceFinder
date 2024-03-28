@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <title>User Dashboard</title>
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Dashboard</h1>
+    </header>
+    
+    <section id="roleSelection">
+        <p>Select your role: </p>
+        <button onclick="showDashboard('reviewer')">Reviewer</button>
+        <button onclick="showDashboard('admin')">Admin</button>
+    </section>
+    
+    <section id="reviewerDashboard" class="hidden">
+        <h2>Reviewer Dashboard</h2>
+        <ul>
+            <li><a href="#">Submit a Study Spot</a></li>
+            <li><a href="#">Review Submitted Spots</a></li>
+        </ul>
+    </section>
+    
+    <section id="adminDashboard" class="hidden">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li><a href="#">Manage Site</a></li>
+            <li><a href="#">Access Database</a></li>
+            <li><a href="#">Confirm Submissions</a></li>
+            <li><a href="#">Delete Reviews</a></li>
+        </ul>
+    </section>
+    
+    <script>
+        function showDashboard(role) {
+            document.getElementById('roleSelection').style.display = 'none';
+            if (role === 'reviewer') {
+                document.getElementById('reviewerDashboard').style.display = 'block';
+            } else if (role === 'admin') {
+                document.getElementById('adminDashboard').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

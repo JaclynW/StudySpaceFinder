@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -28,6 +28,62 @@
         </div>
     </div>
 
+    
+
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <title>Study Space Finder</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Study Spot Finder</h1>
+        <p>Find your perfect study spot with ease.</p>
+    </header>
+    
+    <section id="login-registration">
+        <h2>Login or Register</h2>
+        <form id="loginForm">
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Or</p>
+        <form id="registrationForm">
+            <input type="radio" id="admin" name="role" value="admin">
+            <label for="admin">Admin</label><br>
+            <input type="radio" id="reviewer" name="role" value="reviewer">
+            <label for="reviewer">Reviewer</label><br>
+            <input type="radio" id="guest" name="role" value="guest" checked>
+            <label for="guest">Guest</label><br>
+            <button type="button" onclick="register()">Register</button>
+        </form>
+    </section>
+    
+    <section id="search">
+        <h2>Search for Study Spaces</h2>
+        <form id="searchForm">
+            <input type="text" placeholder="Enter Zipcode" name="zipcode" required>
+            <button type="submit">Search</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>Contact Us | About Us</p>
+    </footer>
+    
+    <script>
+        function register() {
+            // Placeholder for registration functionality
+            alert("Registration functionality to be implemented.");
+        }
+    </script>
+</body>
 </html>
