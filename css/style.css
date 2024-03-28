@@ -112,6 +112,28 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
 }
 
+.label-text{
+    color: #fffffe;
+    font-weight: bold;
+}
+
+h1{
+    color: #fffffe;
+}
+
+h3{
+    color: #fffffe;
+}
+
+
+footer a {
+    color: #fffffe; /* Change the color to fit your footer's style */
+    text-decoration: none; /* Removes the underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adds an underline on hover for visual feedback */
+}
 
 .search-section input[type="text"], .search-section input[type="checkbox"] {
     margin: 10px 0;
