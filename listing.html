@@ -1,34 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/icon.png" type="image/png">
     <title>Study Space Listings</title>
-    <style>
-        /* Quick styles for demonstration */
-        .listing { border: 1px solid #ddd; margin-bottom: 10px; padding: 10px; }
-        .details { display: none; }
-    </style>
+    <link rel="stylesheet" href="css/listing.css">
 </head>
+
 <body>
+
+    <nav id="navbar">
+        <div id="logo">Study Spot Finder</div>
+        <div id="search-box">
+            <input type="search" id="search-input" placeholder=" Enter zipcode... ">
+            <button id="search-btn">&#128269;</button> 
+            <button id="close-btn">&#10006;</button> 
+        </div>
+    </nav>
+
     <header>
         <h1>Study Space Listings</h1>
     </header>
     
-    <section id="filter">
-        <h2>Filter Results</h2>
-        <form id="filterForm">
-            <label for="wifi">Wi-Fi</label>
+    <section id="filter-section">
+        <h2>Filter</h2>
+        <hr>
+        <!-- SERVICES FORM -->
+        <form id="services-form">
+            <h3>Services:</h3>
             <input type="checkbox" id="wifi" name="wifi">
-            <label for="outlets">Power Outlets</label>
+            <label for="wifi">Wi-Fi</label> <br>
             <input type="checkbox" id="outlets" name="outlets">
+            <label for="outlets">Power Outlets</label> <br>
+            <input type="checkbox" id="printing" name="printing">
+            <label for="printing">Printing</label> <br>
+            <input type="checkbox" id="food" name="food">
+            <label for="food">Food</label> <br>
             <!-- Add other filters as needed -->
             <button type="submit">Apply Filters</button>
         </form>
+        <!-- SPOT TYPE -->
+        <form id="spot-type-form">
+            <h3>Spot Type:</h3>
+            <input type="checkbox" id="library" name="library">
+            <label for="library">Library</label>
+            <input type="checkbox" id="cafe" name="cafe">
+            <label for="cafe">Café</label>
+            <input type="checkbox" id="outdoor" name="outdoor">
+            <label for="outdoor">Outdoor</label>
+            <!-- Add other filters as needed -->
+            <button type="submit">Apply Filters</button>
+        </form>
+
+        <form id="time-form">
+            <h3>Time Availability:</h3>
+            <label>from</label>
+            <input type="time" id="open-time">
+            <label>to</label>
+            <input type="time" id="close-time">
+            <!-- Add other filters as needed -->
+            <button type="submit">Apply Filters</button>
+        </form>
+
+        <form id="day-form">
+            <h3>Time Availability:</h3>
+            <input type="checkbox" id="mon" name="mon">
+            <label for="mon">Monday</label>
+            <input type="checkbox" id="tue" name="tue">
+            <label for="tue">Tuesday</label> <br>
+            <input type="checkbox" id="wed" name="wed">
+            <label for="wed">Wednesday</label>
+            <input type="checkbox" id="thu" name="thu">
+            <label for="thu">Thursday</label> <br>
+            <input type="checkbox" id="fri" name="fri">
+            <label for="fri">Friday</label>
+            <input type="checkbox" id="sat" name="sat">
+            <label for="sat">Saturday</label> <br>
+            <input type="checkbox" id="sun" name="sun">
+            <label for="sun">Sunday</label> <br>
+            <!-- Add other filters as needed -->
+            <button type="submit">Apply Filters</button>
+        </form>
+
     </section>
     
-    <section id="results">
+    <section id="results-section">
         <h2>Search Results</h2>
         <!-- Example listings (These would be dynamically generated in a real application) -->
         <div class="listing" onclick="showDetails('details1')">
