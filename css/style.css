@@ -147,7 +147,10 @@ footer a:hover {
     padding: 10px 20px;
     align-items: center;
 }
-
+#navbar a {
+    color: #001e1d; /* Makes text color white */
+    text-decoration: none; /* Removes underline */
+}
 #logo {
     font-size: 24px;
     font-weight: bold;
