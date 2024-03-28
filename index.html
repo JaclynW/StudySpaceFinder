@@ -12,78 +12,32 @@
 <body>
     <nav id="navbar">
         <div id="logo">Study Spot Finder</div>
-        <div id="search-box">
-            <input type="search" id="search-input" placeholder=" Enter zipcode... ">
-            <button id="search-btn">&#128269;</button> 
-            <button id="close-btn">&#10006;</button> 
-        </div>
+        <form id="search-form">
+            <div id="search-box">
+                <input type="search" id="search-input" placeholder="Enter zipcode...">
+                <button id="search-btn">&#128269;</button>
+                <button type="button" id="close-btn">&#10006;</button>
+            </div>
+        </form>
+        
     </nav>
 
-    <div class="section" id="find-your-study-spot">
-        <div class="content ">
-            <h1>Find Your Study Spot</h1>
-            <p>Welcome to our study space finder, where you can discover the ideal spot to boost your productivity.
-                Explore quiet cafes, libraries, and more!</p>
-            <button class="button">Register/Login</button>
+    <div id="main-content">
+        <div class="section" id="find-your-study-spot">
+            <div class="content ">
+                <h1>Find Your Study Spot</h1>
+                <p>Welcome to our study space finder, where you can discover the ideal spot to boost your productivity.
+                    Explore quiet cafes, libraries, and more!</p>
+                <button class="button">Login/Register</button>
+            </div>
         </div>
     </div>
 
-    
+    <script src="js/script.js"></script>
 
-</body>
-
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/icon.png" type="image/png">
-    <title>Study Space Finder</title>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Study Spot Finder</h1>
-        <p>Find your perfect study spot with ease.</p>
-    </header>
-    
-    <section id="login-registration">
-        <h2>Login or Register</h2>
-        <form id="loginForm">
-            <input type="text" placeholder="Username" name="username" required>
-            <input type="password" placeholder="Password" name="password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p>Or</p>
-        <form id="registrationForm">
-            <input type="radio" id="admin" name="role" value="admin">
-            <label for="admin">Admin</label><br>
-            <input type="radio" id="reviewer" name="role" value="reviewer">
-            <label for="reviewer">Reviewer</label><br>
-            <input type="radio" id="guest" name="role" value="guest" checked>
-            <label for="guest">Guest</label><br>
-            <button type="button" onclick="register()">Register</button>
-        </form>
-    </section>
-    
-    <section id="search">
-        <h2>Search for Study Spaces</h2>
-        <form id="searchForm">
-            <input type="text" placeholder="Enter Zipcode" name="zipcode" required>
-            <button type="submit">Search</button>
-        </form>
-    </section>
     
     <footer>
         <p>Contact Us | About Us</p>
     </footer>
-    
-    <script>
-        function register() {
-            // Placeholder for registration functionality
-            alert("Registration functionality to be implemented.");
-        }
-    </script>
 </body>
 </html>
