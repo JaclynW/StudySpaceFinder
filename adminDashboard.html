@@ -29,8 +29,6 @@
         <h1>Admin Dashboard</h1>
     </header>
 
-
-
     <section id="pendingApprovals">
         <h2>Pending Listing Approvals</h2>
         <ul id="pendingList">
@@ -40,7 +38,7 @@
                 <p>Location: Downtown</p>
                 <!-- More listing details here -->
                 <button onclick="editListing()">Edit</button>
-                <button>Approve</button>
+                <button class="approveBtn" data-listing-id="1">Approve</button>
             </li>
             <!-- Repeat for each pending listing -->
         </ul>
@@ -78,19 +76,35 @@
                 <label for="editAdditionalInfo">Additional Information:</label>
                 <textarea id="editAdditionalInfo" name="additionalInfo"></textarea>
 
-                <button type="button" onclick="closeEditModal()">Cancel</button>
                 <button type="submit">Save Changes</button>
             </form>
             <!-- Close button -->
-            <button onclick="closeEditModal()" style="cursor:pointer;">Close</button>
+            <button onclick="closeEditModal()" style="cursor:pointer;">Close/Cancel</button>
         </div>
     </div>
 
 
     <!-- Script for handling Edit and Approval actions -->
     <script>
+        // Placeholder function for approving a listing
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('pendingList').addEventListener('click', function (event) {
+                if (event.target.classList.contains('approveBtn')) {
+                    const listingId = event.target.getAttribute('data-listing-id');
+                    approveListing(listingId);
+                }
+            });
+        });
+
+        function approveListing(listingId) {
+            // Placeholder: send a request to the server to approve the listing
+            console.log('Listing approved:', listingId); // For testing purposes
+        }
+
+
         function editListing(listingId) {
             // This will be updated once the database is implemented, for now this is a placeholder listing
+            // The logic for updating the database with the edited listing will be added here
             const listingDetails = {
                 name: "Quiet Study Cafe",
                 location: "Downtown",
@@ -124,7 +138,26 @@
             }
         }
 
-        document.getElementById('search-form').addEventListener('submit', function (event) {
+        // Add event listener for the edit form submission
+        document.getElementById('editForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const formData = {
+                name: document.getElementById('editName').value,
+                location: document.getElementById('editLocation').value,
+                wifi: document.getElementById('editWifi').value,
+                outlets: document.getElementById('editOutlets').value,
+                hours: document.getElementById('editHours').value,
+                additionalInfo: document.getElementById('editAdditionalInfo').value,
+            };
+
+            // Placeholder: send form data to database here
+            console.log(formData); //For testing purposes
+            // Reset the form or provide feedback to the user
+        });
+
+        // Search query in the search bar
+        document.getElementById('search-form').addEventListener('search-btn', function (event) {
             var searchInput = document.getElementById('search-input');
             var errorMessage = document.getElementById('error-message');
 
@@ -134,6 +167,9 @@
                 errorMessage.style.display = 'block'; // Show the error message
             } else {
                 errorMessage.style.display = 'none'; // Hide the error message
+
+                //Redirect to listing page with fresh query search 
+
             }
         });
 

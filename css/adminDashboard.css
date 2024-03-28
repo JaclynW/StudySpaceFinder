@@ -12,8 +12,12 @@ header {
     margin-bottom: 40px;
 }
 
-h1, h2 {
+h1 {
     color: #fffffe;
+}
+
+h2 {
+    color: #f9bc60;
 }
 
 ul {
@@ -31,6 +35,7 @@ li {
 p {
     color: #333;
 }
+
 
 button {
     cursor: pointer;
