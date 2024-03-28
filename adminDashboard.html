@@ -30,26 +30,26 @@
     </header>
 
     <section id="pendingApprovals">
-        <h2>Pending Listing Approvals</h2>
+        <h2>Pending Spot Approvals</h2>
         <ul id="pendingList">
-            <!-- Pending listings will be dynamically loaded here -->
+            <!-- Pending spots will be dynamically loaded here -->
             <li>
-                <p>Listing Name: Quiet Study Cafe</p>
+                <p>Spot Name: Quiet Study Cafe</p>
                 <p>Location: Downtown</p>
-                <!-- More listing details here -->
-                <button onclick="editListing()">Edit</button>
-                <button class="approveBtn" data-listing-id="1">Approve</button>
+                <!-- More spot details here -->
+                <button onclick="editSpot()">Edit</button>
+                <button class="approveBtn" data-spot-id="1">Approve</button>
             </li>
-            <!-- Repeat for each pending listing -->
+            <!-- Repeat for each pending spot -->
         </ul>
     </section>
 
-    <!-- Edit Listing Modal -->
+    <!-- Edit Spot Modal -->
     <div id="editModal"
         style="display:none; position:fixed; z-index:1; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4); padding-top:60px;">
         <div
             style="background-color:#fefefe; margin:auto; padding:20px; border:1px solid #888; width:80%; max-width:600px;">
-            <h2>Edit Listing</h2>
+            <h2>Edit Study Spot</h2>
             <!-- Edit form (structure similar to your submission form) -->
             <form id="editForm">
                 <label for="editName">Study Spot Name:</label>
@@ -86,26 +86,26 @@
 
     <!-- Script for handling Edit and Approval actions -->
     <script>
-        // Placeholder function for approving a listing
+        // Placeholder function for approving a spot
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('pendingList').addEventListener('click', function (event) {
                 if (event.target.classList.contains('approveBtn')) {
-                    const listingId = event.target.getAttribute('data-listing-id');
-                    approveListing(listingId);
+                    const spotId = event.target.getAttribute('data-spot-id');
+                    approveSpot(spotId);
                 }
             });
         });
 
-        function approveListing(listingId) {
-            // Placeholder: send a request to the server to approve the listing
-            console.log('Listing approved:', listingId); // For testing purposes
+        function approveSpot(spotId) {
+            // Placeholder: send a request to the server to approve the spot
+            console.log('Spot approved:', spotId); // For testing purposes
         }
 
 
-        function editListing(listingId) {
-            // This will be updated once the database is implemented, for now this is a placeholder listing
-            // The logic for updating the database with the edited listing will be added here
-            const listingDetails = {
+        function editSpot(spotId) {
+            // This will be updated once the database is implemented, for now this is a placeholder spot
+            // The logic for updating the database with the edited spot will be added here
+            const spotDetails = {
                 name: "Quiet Study Cafe",
                 location: "Downtown",
                 wifi: "yes",
@@ -114,13 +114,13 @@
                 additionalInfo: "Free coffee for members."
             };
 
-            // Fill the edit form with the listing's details
-            document.getElementById('editName').value = listingDetails.name;
-            document.getElementById('editLocation').value = listingDetails.location;
-            document.getElementById('editWifi').value = listingDetails.wifi;
-            document.getElementById('editOutlets').value = listingDetails.outlets;
-            document.getElementById('editHours').value = listingDetails.hours;
-            document.getElementById('editAdditionalInfo').value = listingDetails.additionalInfo;
+            // Fill the edit form with the spot's details
+            document.getElementById('editName').value = spotDetails.name;
+            document.getElementById('editLocation').value = spotDetails.location;
+            document.getElementById('editWifi').value = spotDetails.wifi;
+            document.getElementById('editOutlets').value = spotDetails.outlets;
+            document.getElementById('editHours').value = spotDetails.hours;
+            document.getElementById('editAdditionalInfo').value = spotDetails.additionalInfo;
 
             // Show the edit modal
             document.getElementById('editModal').style.display = 'block';
@@ -168,7 +168,7 @@
             } else {
                 errorMessage.style.display = 'none'; // Hide the error message
 
-                //Redirect to listing page with fresh query search 
+                //Redirect to spot page with fresh query search 
 
             }
         });
