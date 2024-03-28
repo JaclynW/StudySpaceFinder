@@ -12,22 +12,28 @@
 <body>
     <nav id="navbar">
         <div id="logo">Study Spot Finder</div>
-        <div id="search-box">
-            <input type="search" id="search-input" placeholder=" Enter zipcode... ">
-            <button id="search-btn">&#128269;</button> 
-            <button id="close-btn">&#10006;</button> 
-        </div>
+        <form id="search-form">
+            <div id="search-box">
+                <input type="search" id="search-input" placeholder="Enter zipcode...">
+                <button id="search-btn">&#128269;</button>
+                <button type="button" id="close-btn">&#10006;</button>
+            </div>
+        </form>
+        
     </nav>
 
-    <div class="section" id="find-your-study-spot">
-        <div class="content ">
-            <h1>Find Your Study Spot</h1>
-            <p>Welcome to our study space finder, where you can discover the ideal spot to boost your productivity.
-                Explore quiet cafes, libraries, and more!</p>
-            <button class="button">Register/Login</button>
+    <div id="main-content">
+        <div class="section" id="find-your-study-spot">
+            <div class="content ">
+                <h1>Find Your Study Spot</h1>
+                <p>Welcome to our study space finder, where you can discover the ideal spot to boost your productivity.
+                    Explore quiet cafes, libraries, and more!</p>
+                <button class="button">Login/Register</button>
+            </div>
         </div>
     </div>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>
