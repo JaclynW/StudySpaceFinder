@@ -1,7 +1,9 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #004643;
+    color: #001e1d; /* Added from new CSS for body color */
 }
+
 /* Unique background color for each section */
 #find-your-study-spot {
     position: relative;
@@ -15,11 +17,9 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background:  url('../assets/studySpot2.png') no-repeat center center;
+    background: url('../assets/studySpot2.png') no-repeat center center;
     background-size: cover;
     z-index: -1;
-    content: "";
-
 }
 
 #find-your-study-spot .inner-div{
@@ -80,9 +80,7 @@ body {
     margin: 10px 0;
     width: 100%;
     margin-right: 10px;
-    
 }
-
 
 /* Existing button and input styles */
 .section {
@@ -98,6 +96,7 @@ body {
     border: none;
     border-radius: 7px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    text-shadow: 3px 3px 5px #000000;
     transition: all 0.3s ease;
     cursor: pointer;
     text-align: center;
@@ -122,35 +121,50 @@ h1{
 }
 
 h3{
-    color: #fffffe;
+    color: #001e1d;
 }
 
+a:visited {
+    color: #d3d3d3; /* Light grey color for visited links */
+}
+
+a:link{
+    color: #d3d3d3;
+    text-decoration: none;
+}
 
 footer a {
-    color: #fffffe; /* Change the color to fit your footer's style */
-    text-decoration: none; /* Removes the underline */
+    color: #fffffe; /* Ensure footer link colors are consistent */
+    text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Adds an underline on hover for visual feedback */
+    text-decoration: underline;
 }
 
 .search-section input[type="text"], .search-section input[type="checkbox"] {
     margin: 10px 0;
 }
 
+.content-container{
+    display: flex;
+    justify-content: space-between;
+}
+
 #navbar {
-    background-color: #abd1c6; /* Adjust the color to match your brand */
+    background-color: #abd1c6;
     color: #001e1d;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
     align-items: center;
 }
+
 #navbar a {
-    color: #001e1d; /* Makes text color white */
-    text-decoration: none; /* Removes underline */
+    color: #001e1d;
+    text-decoration: none;
 }
+
 #logo {
     font-size: 24px;
     font-weight: bold;
@@ -180,10 +194,42 @@ footer a:hover {
 }
 
 #search-btn:hover, #close-btn:hover {
-    background-color: #e16162; /* Light grey background for the button on hover */
+    background-color: #d48989;
 }
 
 /* Hide the close button initially */
 #close-btn {
     display: none;
+}
+
+#filter-section {
+    width: 200px; /* Ensuring unit is specified */
+    margin-right: 20px; /* Keeps the section away from elements on its right */
+    background-color: #abd1c6; /* Background color */
+    padding: 0px 20px 20px 20px; /* Top, Right, Bottom, Left padding */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Margin above and below the section */
+}
+
+#results-section{
+    flex: 1;
+    flex-grow: 1;
+    background-color: #abd1c6; /* Background color */
+    padding: 0px 20px 20px 20px; /* Top, Right, Bottom, Left padding */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Margin above and below the section */
+    margin-left: 15px;
+}
+
+#message{
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+}
+
+.details {
+    border: 2px solid #001e1d; /* Example: solid black border */
+    padding: 10px; /* Adds some space inside the border */
+    margin-top: 10px; /* Adds some space above each details section */
+    border-radius: 5px; /* Optional: Adds rounded corners for a smoother look */
 }
