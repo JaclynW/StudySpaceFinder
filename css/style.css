@@ -128,6 +128,11 @@ a:visited {
     color: #d3d3d3; /* Light grey color for visited links */
 }
 
+a:link{
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
 footer a {
     color: #fffffe; /* Ensure footer link colors are consistent */
     text-decoration: none;
