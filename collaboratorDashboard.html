@@ -29,52 +29,61 @@
         <h1>Collaborator Dashboard</h1>
     </header>
 
+    <div>
+        <section id="submitListing">
+            <h2 class="collab-h2">Submit a Study Spot</h2>
+            <form id="studySpotForm" method="post">
+                <!-- Form fields for submitting a new study spot -->
+                <section id="submissionForm">
+                    <form id="studySpotForm" method="post">
+                        <label for="name">Study Spot Name:</label>
+                        <input type="text" id="name" name="name" required>
 
-    <section id="submitListing">
-        <h2>Submit a Study Spot</h2>
-        <form id="studySpotForm" method="post">
-            <!-- Form fields for submitting a new study spot -->
-            <section id="submissionForm">
-                <form id="studySpotForm" method="post">
-                    <label for="name">Study Spot Name:</label>
-                    <input type="text" id="name" name="name" required>
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" required>
 
-                    <label for="location">Location:</label>
-                    <input type="text" id="location" name="location" required>
+                        <label for="wifi">Wi-Fi Available:</label>
+                        <select id="wifi" name="wifi">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
 
-                    <label for="wifi">Wi-Fi Available:</label>
-                    <select id="wifi" name="wifi">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
+                        <label for="outlets">Power Outlets Available:</label>
+                        <select id="outlets" name="outlets">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
 
-                    <label for="outlets">Power Outlets Available:</label>
-                    <select id="outlets" name="outlets">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
+                        <label for="hours">Opening Hours:</label>
+                        <input type="text" id="hours" name="hours">
 
-                    <label for="hours">Opening Hours:</label>
-                    <input type="text" id="hours" name="hours">
+                        <label for="additionalInfo">Additional Information:</label>
+                        <textarea id="additionalInfo" name="additionalInfo"></textarea>
 
-                    <label for="additionalInfo">Additional Information:</label>
-                    <textarea id="additionalInfo" name="additionalInfo"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+            </form>
+        </section>
 
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
-        </form>
-    </section>
+        <section id="submittedListings">
+            <h2 class="collab-h2">Submitted Spots</h2>
+            <ul>
+                <!-- Dynamically loaded submitted listings and their status -->
+                <li>
+                    Quiet Study Cafe - <strong>Status: Pending Approval</strong>
+                </li>
+            </ul>
+        </section>
+    </div>
 
-    <section id="submittedListings">
-        <h2>Submitted Spots</h2>
-        <ul>
-            <!-- Dynamically loaded submitted listings and their status -->
-            <li>
-                Quiet Study Cafe - <strong>Status: Pending Approval</strong>
-            </li>
-        </ul>
-    </section>
+    <footer>
+        <p>
+            <a href="contact.html">Contact Us</a> | 
+            <a href="sitemap.html">Site Map</a> |
+            <a href="about.html">About Us</a>
+        </p>
+    </footer>
 
 
     <script>
