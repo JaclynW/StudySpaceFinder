@@ -1,5 +1,5 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Verdana';
     background-color: #004643;
     color: #001e1d; /* Added from new CSS for body color */
 }
@@ -89,10 +89,10 @@ body {
 }
 .button {
     padding: 12px 24px; 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Verdana';
     font-size: 18px; 
-    color: #f9bc60; 
-    background-color: #e16162; 
+    color: #001e1d; 
+    background-color: #f9bc60; 
     border: none;
     border-radius: 7px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
@@ -117,7 +117,14 @@ body {
 }
 
 h1{
+    font-family: 'Georgia';
     color: #fffffe;
+}
+
+h2 {
+    font-family: 'Georgia';
+    font-size: 20pt;
+    color: #001e1d;
 }
 
 h3{
@@ -158,6 +165,10 @@ footer a:hover {
     justify-content: space-between;
     padding: 10px 20px;
     align-items: center;
+    height: 50px;
+    font-size: 20pt;
+    box-shadow: 0 10px 20px #121629;
+    margin: -10px -10px 20px;
 }
 
 #navbar a {
@@ -166,6 +177,7 @@ footer a:hover {
 }
 
 #logo {
+    font-family: 'Verdana';
     font-size: 24px;
     font-weight: bold;
 }
