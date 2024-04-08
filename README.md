@@ -1,3 +1,2 @@
 # StudySpaceFinder
-
-Hello world
+# Hello.

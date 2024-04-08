@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Spot Finder - Contact Us</title>
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <!-- Include your navigation here, for example, a link back to the homepage -->
+        <div id="logo"><a href="index.html">Study Spot Finder</a> > Contact Us</div>
+    </nav>
+
+    <div class="content-container">
+        <form id="results-section">
+            <label for="email">Your Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br>
+    
+            <label for="subject">Subject:</label><br>
+            <input type="text" id="subject" name="subject" required><br>
+    
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br><br>
+    
+            <button type="button">Send</button>
+        </form>
+    </div>
+    
+    <script>
+    document.getElementById("contactForm").onsubmit = function(event) {
+        event.preventDefault(); // Prevents form from submitting in the traditional way
+    
+        // Normally, here you'd gather the form data and send it to the server
+        // that handles emailing. For demonstration, just show a message.
+        
+        var contentContainer = document.querySelector('.content-container');
+        contentContainer.innerHTML = "<p>Your message has been sent.</p>";
+    };
+    </script>
+    
+    <footer>
+        <p>
+            <a href="contact.html">Contact Us</a> | 
+            <a href="sitemap.html">Site Map</a> |
+            <a href="about.html">About Us</a>
+        </p>
+    </footer>
+</body>
+</html>
