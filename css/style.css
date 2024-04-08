@@ -4,6 +4,8 @@ body {
     color: #001e1d; /* Added from new CSS for body color */
 }
 
+/* ============================= INDEX PAGE CSS ============================= */
+
 /* Unique background color for each section */
 #find-your-study-spot {
     position: relative;
@@ -126,28 +128,6 @@ body {
     transform: scale(1.05); 
 }
 
-#combined-filters-form button {
-    padding: 8px 10px; 
-    font-family: 'Verdana';
-    font-size: 13px; 
-    color: #001e1d; 
-    background-color: #f9bc60; 
-    border: none;
-    border-radius: 7px; 
-    box-shadow: 1px 1px 5px #001e1d80;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold; 
-}
-
-#combined-filters-form button:hover {
-    background-color:#e16162;
-    opacity: 0.8;
-}
-
 .label-text{
     color: #fffffe;
     font-weight: bold;
@@ -212,6 +192,8 @@ footer a:hover {
     justify-content: space-between;
 }
 
+/* ============================= NAVIGATION CSS ============================= */
+
 #navbar {
     background-color: #abd1c6;
     color: #001e1d;
@@ -271,6 +253,8 @@ footer a:hover {
     display: none;
 }
 
+/* ============================= LISTINGS PAGE CSS ============================= */
+
 #filter-section {
     width: 200px; /* Ensuring unit is specified */
     margin-right: 20px; /* Keeps the section away from elements on its right */
@@ -316,6 +300,28 @@ footer a:hover {
     margin-bottom: 5px;
 }
 
+#combined-filters-form button {
+    padding: 8px 10px; 
+    font-family: 'Verdana';
+    font-size: 13px; 
+    color: #001e1d; 
+    background-color: #f9bc60; 
+    border: none;
+    border-radius: 7px; 
+    box-shadow: 1px 1px 5px #001e1d80;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold; 
+}
+
+#combined-filters-form button:hover {
+    background-color:#e16162;
+    opacity: 0.8;
+}
+
 /* ============================= LOGIN PAGE CSS ============================= */
 
 .loginButton {
@@ -344,7 +350,7 @@ footer a:hover {
     color: #001e1d;
 }
 
-p {
+#login-p {
     margin-bottom: 13px;
     font-family: 'Verdana';
 }
@@ -381,4 +387,36 @@ label.label-text {
 
 .registerButton:hover {
     background-color:#e16162;
+}
+
+/* ============================= ABOUT US PAGE CSS ============================= */
+
+.content-container-about-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 20px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    background-color: #abd1c6;
+    border-radius: 7px;
+    margin: 20px;
+    padding: 30px 50px;
+}
+
+.about-us-intro {
+    padding-left: 70px;
+}
+
+.about-us-p {
+    color: #abd1c6;
 }
