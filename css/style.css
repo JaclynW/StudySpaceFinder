@@ -9,11 +9,11 @@ body {
 /* Unique background color for each section */
 #find-your-study-spot {
     position: relative;
-    height: 600px;
+    height: 580px;
 }
 
 #find-your-study-spot::before {
-    height: 90%;
+    height: 95%;
     content: "";
     position: absolute;
     top: 0;
@@ -49,7 +49,7 @@ body {
     padding-right: 200px;
     margin-left: 50px;
     margin-right: 50px;
-
+    margin-top: 15px;
     box-shadow: 0 0 50px #001e1d;
 }
 
@@ -61,6 +61,7 @@ body {
 #find-your-study-spot .content p {
     font-size: 15pt;
     margin-bottom: 30px;
+    text-shadow: 0px 2px 5px #001e1d80;
 }
 
 #search-function {
@@ -126,6 +127,15 @@ body {
 
 .button:hover {
     transform: scale(1.05); 
+    background-color:#e16162;
+    opacity: 0.8;
+    color:#fffffe;
+}
+
+button:hover { 
+    background-color:#e16162;
+    opacity: 0.8;
+    color:#fffffe;
 }
 
 .label-text{
@@ -136,6 +146,7 @@ body {
 h1{
     font-family: 'Georgia';
     color: #fffffe;
+    text-shadow: 0px 2px 5px #001e1d80;
 }
 
 h2 {
@@ -174,6 +185,8 @@ a:hover {
     text-decoration: underline;
 }
 
+/* ============================= FOOTER CSS ============================= */
+
 footer a {
     color: #fffffe; /* Ensure footer link colors are consistent */
     text-decoration: none;
@@ -189,7 +202,8 @@ footer a:hover {
 
 .content-container{
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    justify-content: center;
 }
 
 /* ============================= NAVIGATION CSS ============================= */
@@ -318,8 +332,10 @@ footer a:hover {
 }
 
 #combined-filters-form button:hover {
+    text-shadow: 0px 1px 2px #001e1d80;
     background-color:#e16162;
     opacity: 0.8;
+    color:#fffffe;
 }
 
 /* ============================= LOGIN PAGE CSS ============================= */
@@ -344,10 +360,14 @@ footer a:hover {
 
 .loginButton:hover {
     background-color:#e16162;
+    text-shadow: 0px 1px 2px #001e1d80;
+    opacity: 0.8;
+    color:#fffffe;
 }
 
 #login-h1 {
     color: #001e1d;
+    text-shadow: 0px 1px 2px #001e1d80;
 }
 
 #login-p {
@@ -357,6 +377,7 @@ footer a:hover {
 
 label.label-text {
     color: #004643;
+    font-family: 'Verdana';
 }
 
 /* ============================= REGISTER PAGE CSS ============================= */
@@ -365,6 +386,8 @@ label.label-text {
     padding: 30px 50px;
     border-radius: 7px;
     background-color: #abd1c6;
+    justify-content: center;
+    width: 50%;
 }
 
 .registerButton {
@@ -387,6 +410,9 @@ label.label-text {
 
 .registerButton:hover {
     background-color:#e16162;
+    text-shadow: 0px 1px 2px #001e1d80;
+    opacity: 0.8;
+    color:#fffffe;
 }
 
 /* ============================= ABOUT US PAGE CSS ============================= */
@@ -419,4 +445,12 @@ label.label-text {
 
 .about-us-p {
     color: #abd1c6;
+}
+
+/* ============================= CONTACT US PAGE CSS ============================= */
+
+#contact-us-form {
+    background-color: #abd1c6;
+    padding: 50px;
+    border-radius: 7px;
 }
