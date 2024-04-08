@@ -13,36 +13,36 @@ header {
 }
 
 h1 {
-    color: #e8e4e6;
+    color: #fffffe;
 }
 
 .collab-h2 {
-    color: #e8e4e6;
+    color: #fffffe;
+    text-shadow: 0px 2px 5px #001e1d80;
 }
 
 li {
-    color: #abd1c6;
+    color: #004643;
 }
 
 #submissionForm {
-    padding: 0px 20px 20px 20px; /* Top, Right, Bottom, Left padding */
     margin: 10px 0; /* Margin above and below the section */
-    background-color: #abd1c6;;
+    background-color: #abd1c6;
     border-radius: 7px;
     padding: 20px;
     box-shadow: 0 10px 20px #001e1d80;
 }
 
 #submitListing {
-    padding: 0px 30px 0px 30px; /* Top, Right, Bottom, Left padding */
-    margin: 10px 0; /* Margin above and below the section */
-    max-width: 500px;
-    margin: auto;
+    max-width: 600px;
 }
 
-#submittedListings {
-    padding: 0px 20px 20px 20px; /* Top, Right, Bottom, Left padding */
-    border-radius: 7px; /* Rounded corners */
+#submissions-list {
+    margin: 10px 0; /* Margin above and below the section */
+    background-color: #abd1c6;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: 0 10px 20px #001e1d80;
 }
 
 form {
@@ -59,11 +59,12 @@ label {
 input[type="text"], select, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #e8e4e6;
     border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 15px;
     color: #004643;
+    font-family: 'Verdana';
 }
 
 textarea {
@@ -88,5 +89,14 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color:#e16162;
+    color: #fffffe;
+    text-shadow: 0px 2px 5px #001e1d80;
     opacity: 0.8;
+}
+
+#collab-container {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
 }

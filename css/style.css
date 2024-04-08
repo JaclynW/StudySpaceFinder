@@ -127,6 +127,15 @@ body {
 
 .button:hover {
     transform: scale(1.05); 
+    background-color:#e16162;
+    opacity: 0.8;
+    color:#fffffe;
+}
+
+button:hover { 
+    background-color:#e16162;
+    opacity: 0.8;
+    color:#fffffe;
 }
 
 .label-text{
@@ -321,8 +330,10 @@ footer a:hover {
 }
 
 #combined-filters-form button:hover {
+    text-shadow: 0px 1px 2px #001e1d80;
     background-color:#e16162;
     opacity: 0.8;
+    color:#fffffe;
 }
 
 /* ============================= LOGIN PAGE CSS ============================= */
@@ -347,6 +358,9 @@ footer a:hover {
 
 .loginButton:hover {
     background-color:#e16162;
+    text-shadow: 0px 1px 2px #001e1d80;
+    opacity: 0.8;
+    color:#fffffe;
 }
 
 #login-h1 {
@@ -394,6 +408,9 @@ label.label-text {
 
 .registerButton:hover {
     background-color:#e16162;
+    text-shadow: 0px 1px 2px #001e1d80;
+    opacity: 0.8;
+    color:#fffffe;
 }
 
 /* ============================= ABOUT US PAGE CSS ============================= */

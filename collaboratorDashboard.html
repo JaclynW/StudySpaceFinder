@@ -23,13 +23,13 @@
             </div>
             <div id="error-message" style="color: red; display: none;">Please enter a valid ZIP code.</div>
         </form>
-
     </nav>
+
     <header>
         <h1>Collaborator Dashboard</h1>
     </header>
 
-    <div>
+    <div id = "collab-container">
         <section id="submitListing">
             <h2 class="collab-h2">Submit a Study Spot</h2>
             <form id="studySpotForm" method="post">
@@ -68,12 +68,14 @@
 
         <section id="submittedListings">
             <h2 class="collab-h2">Submitted Spots</h2>
-            <ul>
-                <!-- Dynamically loaded submitted listings and their status -->
-                <li>
-                    Quiet Study Cafe - <strong>Status: Pending Approval</strong>
-                </li>
-            </ul>
+            <div id="submissions-list">
+                <ul>
+                    <!-- Dynamically loaded submitted listings and their status -->
+                    <li>
+                        Quiet Study Cafe - <strong>Status: Pending Approval</strong>
+                    </li>
+                </ul>
+            </div>
         </section>
     </div>
 

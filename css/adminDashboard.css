@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #004643;
-    color: #fff;
+    color: #fffffe;
     padding: 10px;
     margin: 0;
 }
@@ -39,7 +39,7 @@ li {
 }
 
 p {
-    color: #333;
+    color: #001e1d;
 }
 
 
@@ -58,6 +58,8 @@ button {
 
 button:hover {
     background-color:#e16162;
+    color: #fffffe;
+    text-shadow: 0px 2px 5px #001e1d80;
     opacity: 0.8;
 }
 
@@ -123,12 +125,16 @@ textarea {
     transition: all 0.3s ease;
 }
 
+
 #editForm button[type="button"] {
     background-color: #ccc;
     color: #333;
 }
 
+
 #editForm button:hover {
     background-color:#e16162;
+    color: #fffffe;
+    text-shadow: 0px 2px 5px #001e1d80;
     opacity: 0.8;
 }
