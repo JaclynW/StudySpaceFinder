@@ -9,11 +9,11 @@ body {
 /* Unique background color for each section */
 #find-your-study-spot {
     position: relative;
-    height: 600px;
+    height: 580px;
 }
 
 #find-your-study-spot::before {
-    height: 90%;
+    height: 95%;
     content: "";
     position: absolute;
     top: 0;
@@ -49,7 +49,7 @@ body {
     padding-right: 200px;
     margin-left: 50px;
     margin-right: 50px;
-
+    margin-top: 15px;
     box-shadow: 0 0 50px #001e1d;
 }
 
@@ -184,6 +184,8 @@ a:link{
 a:hover {
     text-decoration: underline;
 }
+
+/* ============================= FOOTER CSS ============================= */
 
 footer a {
     color: #fffffe; /* Ensure footer link colors are consistent */
