@@ -61,6 +61,7 @@ body {
 #find-your-study-spot .content p {
     font-size: 15pt;
     margin-bottom: 30px;
+    text-shadow: 0px 2px 5px #001e1d80;
 }
 
 #search-function {
@@ -136,6 +137,7 @@ body {
 h1{
     font-family: 'Georgia';
     color: #fffffe;
+    text-shadow: 0px 2px 5px #001e1d80;
 }
 
 h2 {
@@ -189,7 +191,8 @@ footer a:hover {
 
 .content-container{
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    justify-content: center;
 }
 
 /* ============================= NAVIGATION CSS ============================= */
@@ -348,6 +351,7 @@ footer a:hover {
 
 #login-h1 {
     color: #001e1d;
+    text-shadow: 0px 1px 2px #001e1d80;
 }
 
 #login-p {
@@ -357,6 +361,7 @@ footer a:hover {
 
 label.label-text {
     color: #004643;
+    font-family: 'Verdana';
 }
 
 /* ============================= REGISTER PAGE CSS ============================= */
@@ -365,6 +370,8 @@ label.label-text {
     padding: 30px 50px;
     border-radius: 7px;
     background-color: #abd1c6;
+    justify-content: center;
+    width: 50%;
 }
 
 .registerButton {
@@ -419,4 +426,12 @@ label.label-text {
 
 .about-us-p {
     color: #abd1c6;
+}
+
+/* ============================= CONTACT US PAGE CSS ============================= */
+
+#contact-us-form {
+    background-color: #abd1c6;
+    padding: 50px;
+    border-radius: 7px;
 }
