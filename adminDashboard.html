@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+<!-- Navigation bar -->
     <nav id="navbar">
         <div id="logo"><a href="index.html">Study Spot Finder</a></div>
         <form id="search-form">
@@ -39,6 +39,7 @@
                 <!-- More spot details here -->
                 <button class = "editBtn" onclick="editSpot()">Edit</button>
                 <button class="approveBtn" data-spot-id="1">Approve</button>
+                <button class="deleteBtn" data-spot-id="2">Delete</button>
             </li>
             <!-- Repeat for each pending spot -->
         </ul>
@@ -87,10 +88,15 @@
                 <textarea id="editAdditionalInfo" name="additionalInfo"></textarea>
 
                 <button type="submit">Save Changes</button>
-            </form>
             <!-- Close button -->
-            <button onclick="closeEditModal()" style="cursor:pointer;">Close/Cancel</button>
+            <button id="closeButton" onclick="closeEditModal()" style="cursor:pointer;">Close/Cancel</button>
+            </form>
         </div>
+    </div>
+
+    <!-- Delete button -->
+    <div id="deleteModal"
+        style="display:none; position:fixed; z-index:1; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4); padding-top:60px;">
     </div>
 
     <footer>

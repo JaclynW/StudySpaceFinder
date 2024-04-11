@@ -56,11 +56,26 @@ button {
     transition: all 0.3s ease;
 }
 
+
 button:hover {
     background-color:#e16162;
     color: #fffffe;
     text-shadow: 0px 2px 5px #001e1d80;
     opacity: 0.8;
+}
+
+#closeButton {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-left: 300px;
+    margin-top: 10px;
+    background-color: #f9bc60;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #001e1d;
+    box-shadow: 0 1px 5px #001e1d;
+    transition: all 0.3s ease;
 }
 
 /* Modal Styles */
@@ -117,18 +132,20 @@ textarea {
 
 #editForm button[type="submit"], #editForm button[type="button"] {
     background-color: #f9bc60;
-    color: #004643;
+    color: #333;
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
+    margin-left: 15px;
     margin-top: 10px;
     transition: all 0.3s ease;
+    float: left;
 }
 
 
 #editForm button[type="button"] {
     background-color: #ccc;
-    color: #333;
+    color: #001e1d;
 }
 
 
