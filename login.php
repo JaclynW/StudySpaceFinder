@@ -24,7 +24,7 @@
                 <button class="loginButton" type="submit">Login</button>
             </form><br><br>
             <p>If you don't have an account, you can easily register one!</p>
-            <button class="loginButton" onclick="window.location.href='register.html';">Register</button>
+            <button class="loginButton" onclick="window.location.href='register.php';">Register</button>
         </div>
     </div>
     <footer>
