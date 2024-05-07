@@ -36,13 +36,37 @@
     </footer>
 
     <?php
+    $servername = "localhost";
+    $username = "team_3";
+    $password = "zf7vf2z0"; 
+    $dbname = "team_3"; 
+
+    $conn = new mysqli($servername, $username, $password);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } else {
+        $conn->query("CREATE DATABASE IF NOT EXISTS `$dbname`");
+        $conn->select_db($dbname);
+    }
+
+    $usersTableSql = "CREATE TABLE IF NOT EXISTS Users (
+        user_id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(255) NOT NULL,
+        user_password VARCHAR(255) NOT NULL,
+        type_status VARCHAR(50)
+    )";
+
+    if (!$conn->query($usersTableSql)) {
+        echo "Error creating table: " . $conn->error;
+    }
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        include 'db_connection.php'; // Include your database connection
+        include 'db_connection.php'; 
 
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        // Prepare a statement to avoid SQL injection
         $stmt = $conn->prepare("SELECT user_id, type_status FROM Users WHERE username = ? AND user_password = ?");
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
