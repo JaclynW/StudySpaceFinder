@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Spot Finder - Register</title>
-    <link rel="icon" href="assets/icon.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Study Spot Finder - Register</title>
+   <link rel="icon" href="assets/icon.png" type="image/png">
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav id="navbar">
-        <div id="logo"><a href="index.html">Study Spot Finder</a> > Register</div>
-    </nav>
+      <?php
+    // Database credentials (ideally, move these to a separate config file later)
+    $servername = "localhost";
+    $username = "team_3";
+    $password = "zf7vf2z0"; 
+    $dbname = "team_3"; 
 
-    <div class="section" id="registration-section">
-        <div class="content">
-            <h1>Register</h1>
-            <p>Create an account to find and save your study spots.</p>
-            <form id="registration-form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-                <label for="username">Username</label><br />
-                <input type="text" id="username" name="username" required><br><br>
-                <label for="email">Email</label><br />
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="password">Password</label><br />
-                <input type="password" id="password" name="password" required><br /><br>
-                <button class="registerButton" type="submit">Register</button>
-            </form><br><br>
-            <p>If you already have an account, log in here!</p>
-            <button class="registerButton" onclick="window.location.href='login.php';">Login</button>
-        </div>
-    </div>
+     // Error reporting for development (remove for production)
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
 
-    <footer>
-        <p>
-            <a href="contact.html">Contact Us</a> | 
-            <a href="sitemap.html">Site Map</a> |
-            <a href="about.html">About Us</a>
-        </p>
-    </footer>
+    // Connect to the database
+    $conn = new mysqli($servername, $username, $password);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } else {
+        $conn->query("CREATE DATABASE IF NOT EXISTS `$dbname`");
+        $conn->select_db($dbname);
+    }
 
-    <?php
+    // Handle form submission
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        include 'db_connection.php'; // Ensure db_connection.php is set up for database access
-
         $username = $_POST['username'];
         $email = $_POST['email'];
-        $password = $_POST['password']; // Consider hashing the password
+        $password = $_POST['password'];
 
-        // Prepare and bind
+        // PASSWORD HASHING (Important for security)
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT); 
+
+        // Prepared statement 
         $stmt = $conn->prepare("INSERT INTO Users (username, user_password, email_address) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $username, $password, $email);
+        $stmt->bind_param("sss", $username, $hashed_password, $email); // Bind with hashed password
         $stmt->execute();
 
         if ($stmt->affected_rows > 0) {
-            echo "<script>alert('Registration successful!');</script>";
-            header("Location: login.php"); // Redirect to login page
+            $successMessage = "Registration successful!";
         } else {
-            echo "<script>alert('Error during registration.');</script>";
+            $errorMessage = "Error during registration.";
         }
+
         $stmt->close();
         $conn->close();
     }
-    ?>
+   ?>
+
+   <?php if (isset($successMessage)) : ?>
+       <div class="success-message"><?= $successMessage ?></div>
+   <?php elseif (isset($errorMessage)) : ?>
+        <div class="error-message"><?= $errorMessage ?></div> 
+   <?php endif; ?> 
+
 </body>
 </html>
