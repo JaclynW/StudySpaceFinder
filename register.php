@@ -9,13 +9,13 @@
 </head>
 <body>
       <?php
-    // Database credentials (ideally, move these to a separate config file later)
+    // Database credentials
     $servername = "localhost";
     $username = "team_3";
     $password = "zf7vf2z0"; 
     $dbname = "team_3"; 
 
-     // Error reporting for development (remove for production)
+     // Error reporting for development
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
 
