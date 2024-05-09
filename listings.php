@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Spot Finder - Listings</title>
     <link rel="icon" href="assets/icon.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -47,17 +47,22 @@
                 $filteredResults = $results;
             }
 
-            foreach ($filteredResults as $row) {
-                echo "<div class='listing' onclick='showDetails(\"details{$row['location_id']}\")'>";
-                echo "<h3>{$row['location_name']}</h3>";
-                echo "<p>Location: {$row['address_1']} {$row['city']}</p>";
-                echo "</div>";
-                echo "<div id='details{$row['location_id']}' class='details' style='display: none;'>";
-                echo "<p>Wi-Fi: " . ($row['wifi'] ? 'Yes' : 'No') . "</p>";
-                echo "<p>Power Outlets: " . ($row['outlets'] ? 'Yes' : 'No') . "</p>";
-                echo "<p>Opening Hours: {$row['hours']}</p>";
-                echo "<a href='{$row['google_maps_link']}' target='_blank'>Get Directions</a> | <a href='#'>Website</a>";
-                echo "</div>";
+            if (empty($filteredResults)) {
+                echo "<p>No location has been entered within 30 miles of your zip code! Would you like to enter one now?</p>";
+                echo "<button onclick=\"window.location.href='login.php'\">Add Location</button>";
+            } else {
+                foreach ($filteredResults as $row) {
+                    echo "<div class='listing' onclick='showDetails(\"details{$row['location_id']}\")'>";
+                    echo "<h3>{$row['location_name']}</h3>";
+                    echo "<p>Location: {$row['address_1']} {$row['city']}</p>";
+                    echo "</div>";
+                    echo "<div id='details{$row['location_id']}' class='details' style='display: none;'>";
+                    echo "<p>Wi-Fi: " . ($row['wifi'] ? 'Yes' : 'No') . "</p>";
+                    echo "<p>Power Outlets: " . ($row['outlets'] ? 'Yes' : 'No') . "</p>";
+                    echo "<p>Opening Hours: {$row['hours']}</p>";
+                    echo "<a href='{$row['google_maps_link']}' target='_blank'>Get Directions</a> | <a href='#'>Website</a>";
+                    echo "</div>";
+                }
             }
             ?>
         </section>
