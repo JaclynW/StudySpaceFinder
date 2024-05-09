@@ -49,7 +49,7 @@
 
             if (empty($filteredResults)) {
                 echo "<p>No location has been entered within 30 miles of your zip code! Would you like to enter one now?</p>";
-                echo "<button onclick=\"window.location.href='login.php'\">Add Location</button>";
+                echo "<button class="button" onclick="window.location.href='login.php';">Login</button>";
             } else {
                 foreach ($filteredResults as $row) {
                     echo "<div class='listing' onclick='showDetails(\"details{$row['location_id']}\")'>";
